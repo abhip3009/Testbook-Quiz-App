@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</div>
+
+<body>
+<!-- Introduction Page -->
+    <div class="home">
+<div class="user-detail-sec">
+
+        <img src="testbook logo.png" alt="home-logo" class="home-logo">
+        <h1 class="greet" id="showName">Hello User!</h1>
+        <h2 class="user-name">Enter your <span class="inner-user-name">name</span> to continue the Quiz.
+            </h2>
+
+        <!-- user details -->
+            <form action="" class="user-inp" name="welcome-form" onsubmit="submitForm(event)">
+                <input type="text" id="inp-text" name="name" placeholder="User Name...">
+                <input type="submit" value="Enter" id="user-name-btn">
+            </form>
+            <div class="notice">
+                <p class="notice-text">You will have <span class="notice-text-red"> 30 seconds </span> to answer each
+                    question.</p>
+            </div>
+        </div>
+        <div class="option-list hide">
+            <h1 class="category-info">Select Category</h1>
+            <div class="category">
+
+                <button id="pnc" class="home-btn" onclick="startPncQuiz()">Pipes and Cisterns</button>
+                <button id="pbb" class="home-btn" onclick="startPbbQuiz()">Probablity</button>
+                <button id="poa" class="home-btn" onclick="startPoaQuiz()">Problems on Ages</button>
+                <button id="pl" class="home-btn" onclick="startPlQuiz()">Profit and Loss</button>
+            </div>
+        </div>
+    </div>
+
+<!-- Pipes and Cisterns Quiz section starts here -->
+
+<div class="quiz-box hide">
+        <header class="header-sec">
+
+            <div class="timer">
+                <p class="time-text">Time:<span id="timer"></span></span></p>
+            </div>
+
+            <div class="topic-head">
+                <p class="name" id="topicName"></p>
+            </div>
+            <div class="score">
+                <p class="score-text">Score <span id="scored-marks">0</span></p>
+            </div>
+            <div id="time-line"></div>
+        </header>
+<section class="section1">
+            <div class="que-text" id="queText">
+                <span></span>
+            </div>
+            <div class="ans-list">
+                <div class="options" id="answer1">
+                    <p id="ans1"></p>
+
+                </div>
+                <div class="options" id="answer2">
+                    <p id="ans2"></p>
+
+                </div>
+                <div class="options" id="answer3">
+                    <p id="ans3"></p>
+
+                </div>
+                <div class="options" id="answer4">
+                    <p id="ans4"></p>
+
+                </div>
+
+            </div>
+        </section>
+<!-- ..... -->
+        <footer class="foot-quiz hide">
+            <div class="next-btn">
+                <button id="next">Next Question</button>
+            </div>
+        </footer>
+    </div>
+
+
+<!-- Quiz result starts here -->
+
+    <div class="result-page hide">
+        <div class="head">
+            <h1 class="heading">Quiz Result</h1>
+        </div>
+        <div class="timeOver"><span class="timeOver-text"></span></div>
+        <div class="scorecard">
+            <p class="show"><b><span id="result-name">XXX</span> your result is:</b></p>
+            <p class="show">Total time taken: <span id="time-taken"></span></p>
+            <p class="show">Total question: <span id="total-que">10</span></p>
+            <p class="show">Total question attempted: <span id="total-que-attempted"></span></p>
+            <p class="show">Correct: <span id="correct-ans">XXX</span></p>
+            <p class="show">Wrong: <span id="wrong-ans">XXX</span></p>
+            <p class="show">Percentage: <span id="percentage">XXX</span></p>
+        </div>
+        <div class="result-btn">
+            <button id="start-again" class="restart">Play Again</button>
+            <button id="go-to-home" class="home-btn-end" onclick="myHome()">Go to Home</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+    <script src="question.js"></script>
+
+
+
+</body>
+
+</html>
